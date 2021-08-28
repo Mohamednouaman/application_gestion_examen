@@ -1,5 +1,6 @@
 -----------*****Base de données*****-------------------
-
+ 
+CREATE DATABASE ecole;
 
 CREATE TABLE `CoordonnateurFiliere` (
 
