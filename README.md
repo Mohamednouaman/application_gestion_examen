@@ -126,23 +126,23 @@ CREATE TABLE Module (
 
 CREATE TABLE `Etudiant` (
 
-    CNE VARCHAR(20) PRIMARY KEY ,
+     CNE VARCHAR(20) PRIMARY KEY ,
     
-    nom VARCHAR(20) ,
+     nom VARCHAR(20) ,
     
-    prenom VARCHAR(20) ,
+     prenom VARCHAR(20) ,
     
-    email VARCHAR(50) ,
+     email VARCHAR(50) ,
     
-    mot_de_passe VARCHAR(20) ,
+     mot_de_passe VARCHAR(20) ,
     
-    CHECK (  LENGTH(TRIM(mot_de_passe))   >=  4   ) ,
+     CHECK (  LENGTH(TRIM(mot_de_passe))   >=  4   ) ,
     
-    anneefiliere VARCHAR(60) ,
+     anneefiliere VARCHAR(60) ,
     
-    FOREIGN KEY (anneefiliere) REFERENCES AnneeFiliere(id) ,
+     FOREIGN KEY (anneefiliere) REFERENCES AnneeFiliere(id) ,
     
-    CHECK (  TRIM(email)  !=  ""  )
+     CHECK (  TRIM(email)  !=  ""  )
     
 ) ;
 
