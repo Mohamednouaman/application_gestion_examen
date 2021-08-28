@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane stylesheets="@../filescss/application.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controllers.ControllerLogin">
+	<children>
+		<GridPane alignment="CENTER" layoutX="411.0" layoutY="50.0" styleClass="gridpane" AnchorPane.rightAnchor="23.666666666666742" AnchorPane.topAnchor="50.0">
+
+			<children>
+				<HBox alignment="CENTER" prefHeight="32.0" prefWidth="334.0" styleClass="hbox-connexion" GridPane.columnSpan="2" GridPane.rowIndex="3">
+					<children>
+						<Button fx:id="connexion" onAction="#connecter" styleClass="connexion" text="Connexion">
+							<HBox.margin>
+								<Insets left="10.0" />
+							</HBox.margin>
+						</Button>
+					</children>
+					<GridPane.margin>
+						<Insets top="40.0" />
+					</GridPane.margin>
+				</HBox>
+				<HBox styleClass="hbox_remember_password" GridPane.columnSpan="2" GridPane.rowIndex="4" />
+				<HBox styleClass="copyright" GridPane.columnSpan="2" GridPane.rowIndex="8">
+				  <children>
+				  <Label text="ENSAH Copyright©2021" />
+				  </children>
+				</HBox>
+			      <HBox prefHeight="39.0" prefWidth="334.0" styleClass="container-progress" GridPane.columnSpan="2" GridPane.rowIndex="6">
+               <children>
+                  <ProgressIndicator fx:id="progress" prefHeight="30.0" styleClass="progress-indicator" />
+               </children>
+			      
+			      </HBox>
+
+            
+				<Label styleClass="label-connexion" text="Nom d'utilisateur     :" />
+				<Label styleClass="label-connexion" text="Mot de passe           :" GridPane.rowIndex="1" />
+				<TextField fx:id="username" styleClass="textfield" GridPane.columnIndex="1" />
+				<PasswordField fx:id="password" styleClass="textfield" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label fx:id="message_error_success" alignment="CENTER" prefHeight="18.0" prefWidth="336.0" GridPane.columnSpan="2" GridPane.rowIndex="5" />
+      
+			</children>
+         <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints percentHeight="0.0" />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+         </rowConstraints>
+         <padding>
+            <Insets top="50.0" />
+         </padding>
+
+		</GridPane>
+      <AnchorPane styleClass="container-design" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="422.6666666666667" AnchorPane.topAnchor="0.0">  
+         <children>
+         <AnchorPane styleClass="container-logo-inscription" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="0.0">
+           <children>
+
+            <VBox styleClass="v-box" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="340.0">
+               <children>
+                  <Label styleClass="label-b" text="Bienvenu" />
+                  <Label styleClass="label-s" text="Sur la plateforme de gestion d'examens" wrapText="true">
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                        
+                           </Label>
+               </children>
+            </VBox>
+                  <HBox styleClass="container-button-inscription" AnchorPane.bottomAnchor="101.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="429.0">
+                     <children>
+                        <Button fx:id="inscription" mnemonicParsing="false" onAction="#inscrire" text="Inscrivez-vous ">
+                           <HBox.margin>
+                              <Insets bottom="4.0" left="4.0" right="4.0" top="30.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <Label alignment="CENTER" layoutX="95.0" layoutY="499.0" prefHeight="38.0" prefWidth="167.0" text="Si vous êtes étudiant" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+      </children>
+      </AnchorPane>
+	</children>
+
+
+</AnchorPane>

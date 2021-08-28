@@ -1,0 +1,125 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>devdesktop.app</groupId>
+	<artifactId>projet--gestionExamen</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<properties>
+		<maven.compiler.source>11</maven.compiler.source>
+		<maven.compiler.target>11</maven.compiler.target>
+		<java-version>15</java-version>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>com.sun.mail</groupId>
+			<artifactId>javax.mail</artifactId>
+			<version>1.6.2</version>
+		</dependency>
+		<dependency>
+			<groupId>com.sun.activation</groupId>
+			<artifactId>javax.activation</artifactId>
+			<version>1.2.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.openjfx</groupId>
+			<artifactId>javafx-controls</artifactId>
+			<version>15</version>
+		</dependency>
+		<dependency>
+			<groupId>org.openjfx</groupId>
+			<artifactId>javafx-fxml</artifactId>
+			<version>15</version>
+		</dependency>
+		<dependency>
+			<groupId>com.jfoenix</groupId>
+			<artifactId>jfoenix</artifactId>
+			<version>9.0.10</version>
+		</dependency>
+		<dependency>
+			<groupId>org.openjfx</groupId>
+			<artifactId>javafx-media</artifactId>
+			<version>15</version>
+		</dependency>
+		<dependency>
+			<groupId>org.openjfx</groupId>
+			<artifactId>javafx-graphics</artifactId>
+			<version>15</version>
+		</dependency>
+		<dependency>
+			<groupId>org.openjfx</groupId>
+			<artifactId>javafx-base</artifactId>
+			<version>15</version>
+		</dependency>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.23</version>
+		</dependency>
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.0</version>
+				<configuration>
+					<release>15</release>
+					<source>${java-version}</source>
+					<target>${java-version}</target>
+				</configuration>
+			</plugin>
+
+
+			<plugin>
+				<groupId>org.openjfx</groupId>
+				<artifactId>javafx-maven-plugin</artifactId>
+				<version>0.0.6</version>
+				<executions>
+					<execution>
+						<!-- Default configuration for running -->
+						<!-- Usage: mvn clean javafx:run -->
+						<id>default-cli</id>
+						<configuration>
+							<mainClass>com.app.Main</mainClass>
+							<options>
+								<option>--add-opens</option>
+								<option>javafx.controls/com.sun.javafx.scene.control.behavior=com.jfoenix</option>
+								<option>--add-opens</option>
+								<option>javafx.controls/com.sun.javafx.scene.control=com.jfoenix</option>
+								<option>--add-opens</option>
+								<option>javafx.graphics/com.sun.javafx.scene=ALL-UNNAMED</option>
+								<option>--add-opens</option>
+								<option>javafx.controls/com.sun.javafx.scene.control.behavior=ALL-UNNAMED</option>
+								<option>--add-opens</option>
+								<option>javafx.controls/com.sun.javafx.scene.control=ALL-UNNAMED</option>
+								<option>--add-opens</option>
+								<option>javafx.base/com.sun.javafx.binding=ALL-UNNAMED</option>
+								<option>--add-opens</option>
+								<option>javafx.graphics/com.sun.javafx.stage=ALL-UNNAMED</option>
+								<option>--add-opens</option>
+								<option>javafx.base/com.sun.javafx.event=ALL-UNNAMED</option>
+								<option>--add-exports</option>
+								<option>javafx.controls/com.sun.javafx.scene.control.behavior=ALL-UNNAMED</option>
+								<option>--add-exports</option>
+								<option>javafx.controls/com.sun.javafx.scene.control=ALL-UNNAMED</option>
+								<option>--add-exports</option>
+								<option>javafx.base/com.sun.javafx.binding=ALL-UNNAMED</option>
+								<option>--add-exports</option>
+								<option>javafx.graphics/com.sun.javafx.stage=ALL-UNNAMED</option>
+								<option>--add-exports</option>
+								<option>javafx.base/com.sun.javafx.event=ALL-UNNAMED</option>
+								<!-- Refer : https://github.com/jfoenixadmin/JFoenix/issues/889#issuecomment-450744122 
+									In order to make jfoenix works, it should need less and doesn't need all 
+									of these. You may have to go one by one to find what - - add-opens ... you'll 
+									need in your case. - - add-opens is for enabling deep-reflection - - add-exports 
+									is for direct access -->
+							</options>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+</project>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"  style="-fx-background-color: #4682b4;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controllers.ControllerConnexionAdmin">
+   <children>
+      <AnchorPane layoutX="73.0" layoutY="103.0" prefHeight="263.0" style="-fx-background-color: white; -fx-background-radius: 3px;" AnchorPane.bottomAnchor="62.0" AnchorPane.leftAnchor="170.0" AnchorPane.rightAnchor="170.0" AnchorPane.topAnchor="108.0">
+         <children>
+            <GridPane alignment="CENTER" hgap="5.0" layoutX="22.0" layoutY="11.0" prefHeight="213.0" vgap="30.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="3.0">
+
+               <children>
+                  <Label prefHeight="17.0" text="Nom d'utilisateur        :" />
+                  <Label prefHeight="17.0" text="Mot de passe              :" GridPane.rowIndex="1" />
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="386.0" GridPane.columnSpan="2" GridPane.rowIndex="2">
+                     <children>
+                        <Button fx:id="connexion" mnemonicParsing="false" onAction="#connecter" prefHeight="36.0" prefWidth="139.0" style="-fx-background-color: #4682b4;" text="Connexion" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font></Button>
+                     </children>
+                  </HBox>
+                  <TextField fx:id="username" prefHeight="31.0" promptText="Nom d'utilisateur" GridPane.columnIndex="1" />
+                  <PasswordField fx:id="password" prefHeight="31.0" promptText="Mot de passe" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <columnConstraints>
+                  <ColumnConstraints percentWidth="0.0" />
+                  <ColumnConstraints percentWidth="0.0" prefWidth="200.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="44.000005086263016" minHeight="31.333333333333332" percentHeight="0.0" prefHeight="31.333333333333332" />
+                  <RowConstraints maxHeight="31.333333333333332" minHeight="18.666661580403648" percentHeight="0.0" prefHeight="31.333333333333332" />
+                  <RowConstraints />
+               </rowConstraints>
+            </GridPane>
+            <Label fx:id="label_message" alignment="CENTER" layoutX="53.0" layoutY="242.0" prefHeight="17.0" prefWidth="288.0" wrapText="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <font>
+                  <Font size="13.0" />
+               </font></Label>
+         </children>
+      </AnchorPane>
+      <VBox alignment="TOP_CENTER" layoutX="9.0" layoutY="3.0" prefHeight="100.0" prefWidth="475.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="46.0" prefWidth="145.0" style="-fx-text-fill: white;" text="Bienevenu" textFill="#aac5e3">
+               <font>
+                  <Font name="Monotype Corsiva" size="36.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="55.0" prefWidth="475.0" text="NB   : un des chefs des départements, ou bien coordonnateurs de filières est requis à s'authentifier afin d'ajouter une période d'examen, ou se passeront tous les examens" textAlignment="CENTER" textFill="#fcf9f9" wrapText="true">
+               <font>
+                  <Font size="11.0" />
+               </font>
+               <padding>
+                  <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+               </padding>
+            </Label>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
