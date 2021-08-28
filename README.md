@@ -213,19 +213,19 @@ CREATE TABLE Examen (
 ) ;
 
 
-CREATE TABLE SalleExamen (
+ CREATE TABLE SalleExamen (
 
-   examen INTEGER , 
+     examen INTEGER , 
    
-   salle VARCHAR(20) ,
+     salle VARCHAR(20) ,
    
-   enseignantcontroleur VARCHAR(30) ,
+     enseignantcontroleur VARCHAR(30) ,
    
-   FOREIGN KEY (examen) REFERENCES Examen( id ) ,
+     FOREIGN KEY (examen) REFERENCES Examen( id ) ,
    
-   FOREIGN KEY (salle) REFERENCES Salle( id )  ,
+     FOREIGN KEY (salle) REFERENCES Salle( id )  ,
    
-   FOREIGN KEY (enseignantcontroleur) REFERENCES Enseignant( username ) 
+     FOREIGN KEY (enseignantcontroleur) REFERENCES Enseignant( username ) 
    
 ) ;      
 
